@@ -1,0 +1,48 @@
+* {
+    outline: 2px solid yellow;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0; 
+    background-color: black;
+}
+
+section {
+    display: flex;
+    flex-direction: row; 
+    height: 100vh; 
+    width: 60%; 
+    margin: 0 auto; 
+}
+
+.right_side, .left_side {
+    height: 100%; 
+}
+
+.right_side {
+    flex: 2;
+    background-color: lightgrey;
+    background-image: url('images/background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.left_side {
+    flex: 3;
+    background-color: red;
+}
+
+.transparent_div {
+    width: 100%; 
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 50px;
+    box-sizing: border-box; 
+}
