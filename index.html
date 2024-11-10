@@ -4,7 +4,177 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mudi's Sign-up Form Project</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        @font-face {
+            font-family: 'NorseBold';
+            src: url('https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf') format('opentype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* {
+            outline: 2px solid yellow;
+        }*/
+
+
+        html, body {
+            height: 100%; /* Ensure the body and html take up full height */
+            margin: 0; /* Remove default margins */
+            background-color: black;
+        }
+
+        section {
+            display: flex; /* Set flexbox layout */
+            flex-direction: row; /* Side-by-side layout */
+            height: 100vh; /* Full viewport height */
+            width: 60%; /* Set section width to 60% of the viewport */
+            margin: 0 auto; /* Center the section horizontally */
+        }
+
+        .right_side, .left_side {
+            height: 100%; /* Ensure full height for both sides */
+        }
+
+        .right_side {
+            flex: 2;
+            background-color: lightgrey;
+            background-image: url('images/background_image.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .left_side {
+            flex: 3;
+            background-color: #f9fafb;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .left_side div {
+            flex: 1; /* Make each div take equal height */
+            border: 1px solid #000; /* Just for visibility */
+            box-sizing: border-box;
+        }
+
+        .top_div p {
+            background-color: #f9fafb;
+            font-size: 0.8em;
+            line-height: 1.2; /* Better readability */
+            color: black;
+            text-align: start;
+            font-family: Arial, sans-serif;
+            font-weight: bolder;
+            margin: 0;
+            padding-top: 80px;
+            padding-left: 25px;
+        }
+
+        .top_div strong {
+            font-family: sans-serif; /* Use the custom font for emphasis */
+        }
+
+        .top_div em {
+            color: darkred;
+            font-style: italic;
+        }
+
+
+        .middle_div {
+            padding: 20px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: row;
+            gap: 70px;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        input {
+            border: 2px solid #000;
+            margin-bottom: 15px;
+            padding: 5px;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        input:invalid {
+            border-color: red;
+        }
+
+        input:valid {
+            border-color: green;
+        }
+
+        h3 {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+
+
+        .transparent_div {
+            width: 100%; /* Same width as right_side */
+            background-color: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+            padding: 10px;
+            box-sizing: border-box; /* Ensure padding is inside the width */
+            margin-top: 17vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .transparent_div img {
+            width: 60px;
+            height: auto;
+            margin-right: 0px;
+        }
+
+        .transparent_div span {
+            color: white;
+            margin: 0;
+            font-size: 4em;
+            font-family: 'NorseBold', sans-serif; /* Apply the custom font */
+        }
+
+        .photo_credit {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-size: 0.5em;
+        }
+
+        .photo_credit a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid white; /* White underline */
+            padding-bottom: 0px;
+        }
+
+        .photo_credit a:hover {
+            opacity: 0.8; /* Slight hover effect */
+        }
+    </style>
 </head>
 <body>
     <section>
@@ -27,7 +197,44 @@
                     </strong>    
                 </p>
             </div>
-            <div class="middle_div"></div>
+            <div class="middle_div">
+                <h3><strong>Let's do this!</strong></h3>
+                <form action="#" method="get">
+                    <div class="one">
+                        <div>
+                            <label for="first_name">FIRST NAME</label>
+                        </div>
+                        <input type="text" id="first_name" name="first_name">
+
+                        <div>
+                            <label for="email">EMAIL</label>
+                        </div>
+                        <input type="email" id="email" name="email">-
+
+                        <div>
+                            <label for="password">PASSWORD</label>
+                        </div>
+                        <input type="password" id="password" name="password">
+                    </div>
+
+                    <div class="two">
+                        <div>
+                            <label for="last_name">LAST NAME</label>
+                        </div>
+                        <input type="text" id="last_name" name="last_name">
+
+                        <div>
+                            <label for="phone_number">PHONE NUMBER</label>
+                        </div>
+                        <input type="number" id="phone_number" name="phone_number">
+
+                        <div>
+                            <label for="confirm_password">CONFIRM PASSWORD</label>
+                        </div>
+                        <input type="password" id="confirm_password" name="confirm_password">
+                    </div>
+                </form>
+            </div>
             <div class="bottom_div"></div>
         </div>
     </section>
