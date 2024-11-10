@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'NorseBold';
+    src: url('https://cdn.statically.io/gh/TheOdinProject/theodinproject/efdc2888072f409e687d31dc580595dbe4fe0ff4/app/assets/fonts/Norse-Bold.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.right_side, .left_side {
+    height: 100%;
+}
+
+.right_side {
+    flex: 2;
+    background-color: lightgrey;
+    background-image: url('images/background_image.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.left_side {
+    flex: 3;
+    background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+}
+
+.left_side div {
+    flex: 1;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.top_div p {
+    background-color: #f9fafb;
+    font-size: 0.8em;
+    line-height: 1.2;
+    color: black;
+    text-align: start;
+    font-family: Arial, sans-serif;
+    font-weight: bolder;
+    margin: 0;
+    padding-top: 80px;
+    padding-left: 25px;
+}
+
+.top_div strong {
+    font-family: sans-serif;
+}
+
+.top_div em {
+    color: darkred;
+    font-style: italic;
+}
+
+
+.middle_div {
+    padding: 20px;
+}
+
+
+.transparent_div {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 17vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.transparent_div img {
+    width: 60px;
+    height: auto;
+    margin-right: 0px;
+}
+
+.transparent_div span {
+    color: white;
+    margin: 0;
+    font-size: 4em;
+    font-family: 'NorseBold', sans-serif;
+}
+
+.photo_credit {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.5em;
+}
+
+.photo_credit a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+    padding-bottom: 0px;
+}
+
+.photo_credit a:hover {
+    opacity: 0.8;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    justify-content: center;
+    padding: 10px;
+}
+
+input {
+    border: 2px solid #000;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:valid {
+    border-color: green;
+}
+
+label {
+    font-size: 0.9em;
+    margin-bottom: 5px;
+    display: block;
+}
